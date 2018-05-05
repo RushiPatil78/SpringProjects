@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="employee" class="org.springfm.beans.Employee" >
+		<constructor-arg name="empid" value="1" type="int"/>
+		<constructor-arg name="empName" value="Rushikesh" type="String" />
+		<constructor-arg name="empSalary" value="10000" type="int"/>
+		<constructor-arg name="idepartment" ref="development" />
+
+	</bean>
+
+	<!-- <bean id="employee" class="org.springfm.beans.Employee">
+		<property name="empid" value="1" />
+		<property name="empName" value="Rushikesh" />
+		<property name="empSalary" value="10000" />
+		<property name="idepartment" ref="development" />
+	</bean>
+
+	<bean id="employee1" class="org.springfm.beans.Employee">
+		<property name="empid" value="2" />
+		<property name="empName" value="Hemant" />
+		<property name="empSalary" value="15000" />
+		<property name="idepartment" ref="humanResource" />
+	</bean>
+
+	<bean id="employee2" class="org.springfm.beans.Employee">
+		<property name="empid" value="3" />
+		<property name="empName" value="Ketan" />
+		<property name="empSalary" value="20000" />
+		<property name="idepartment" ref="production" />
+	</bean>
+ -->
+	<bean id="development" class="org.springfm.beans.service.Development" />
+	<bean id="humanResource" class="org.springfm.beans.service.HumanResource" />
+	<bean id="production" class="org.springfm.beans.service.Production" />
+
+</beans>
