@@ -1,0 +1,1 @@
+<a href="customer/list.htm">Manage Customer</a>
